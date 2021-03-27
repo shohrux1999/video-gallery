@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #444342;
+}
+
+.my-img{
+    max-width:100%;
+    max-height: 100px;
+    position: relative;
+}
+.mt-3{
+    position: relative;
+}
+.play-btn{
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+.video{
+    width: 100%;
+    display: none;
+}
+video:focus{
+    outline: none;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>video blog</title>
+</head>
+
+<body>
+    <div class="container-lg bg-dark overflow-hidden mt-5 mb-5 pt-5">
+        <header class="w-100 mb-5 pb-5 bg-dark" style="height: 300px;">
+            <div class="video" id="video_player">
+                <video width="100%" height="340" controls id="myVideo">
+                    <source src="1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <video width="100%" height="340" controls class="Cvideo">
+                <source src="2.mp4" type="video/mp4">
+            </video>
+        </header>
+        <div class="row" style="padding-bottom: 90px;">
+            <div class="col-12 mt-3 col-lg-4 col-sm-4">
+                <img src="1.5.JPG" width="100%">
+                <img src="play.png" class="play-btn" onclick="playVideo('1.mp4')" onmousedown="mouseDown()">
+            </div>
+            <div class="col-12 mt-3 col-lg-4 col-sm-4">
+                <img src="2.5.jpg" width="100%">
+                <img src="play.png" class="play-btn" onclick="playVideo('2.mp4')" onmousedown="mouseDown()">
+            </div>
+            <div class="col-12 mt-3 col-lg-4 col-sm-4">
+                <img src="1.5.jpg" width="100%">
+                <img src="play.png" class="play-btn" onclick="playVideo('3.mp4')" onmousedown="mouseDown()">
+            </div>
+            <div class="col-12 mt-3 col-lg-4 col-sm-4">
+                <img src="2.5.JPG" width="100%">
+                <img src="play.png" class="play-btn" onclick="playVideo('1.mp4')" onmousedown="mouseDown()">
+            </div>
+            <div class="col-12 mt-3 col-lg-4 col-sm-4">
+                <img src="2.5.JPG" width="100%">
+                <img src="play.png" class="play-btn" onclick="playVideo('2.mp4')" onmousedown="mouseDown()">
+            </div>
+            <div class="col-12 mt-3 col-lg-4 col-sm-4">
+                <img src="3.5.JPG" width="100%">
+                <img src="play.png" class="play-btn" onclick="playVideo('3.mp4')" onmousedown="mouseDown()">
+            </div>
+            <div class="col-12 mt-3 col-lg-4 col-sm-4">
+                <img src="3.5.JPG" width="100%">
+                <img src="play.png" class="play-btn" onclick="playVideo('3.mp4')" onmousedown="mouseDown()">
+            </div>
+            <div class="col-12 mt-3 col-lg-4 col-sm-4">
+                <img src="2.5.JPG" width="100%">
+                <img src="play.png" class="play-btn" onclick="playVideo('3.mp4')" onmousedown="mouseDown()">
+            </div>
+            <div class="col-12 mt-3 col-lg-4 col-sm-4">
+                <img src="1.5.JPG" width="100%">
+                <img src="play.png" class="play-btn" onclick="playVideo('3.mp4')" onmousedown="mouseDown()">
+            </div>
+        </div>
+    </div>
+    <script>
+        var video_player = document.getElementById("video_player");
+        var myVideo = document.getElementById("myVideo");
+        var Cvideo = document.querySelector(".Cvideo");
+        function playVideo(file) {
+            myVideo.src = file;
+            video_player.style.display = "block";
+            myVideo.autoplay = true;
+            myVideo.load();
+        }
+        function mouseDown() {
+            Cvideo.style.display = "none";
+            Cvideo.pause();
+        }
+    </script>
+</body>
+
+</html>
